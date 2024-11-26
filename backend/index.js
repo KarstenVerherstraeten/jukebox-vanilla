@@ -70,6 +70,38 @@ app.get("/get-playlist", async (_, res) => {
     }
 });
 
+app.post("/callback", async (req, res) => {
+    const code = req.body.code; // Authorization code from Spotify
+    const client_id = process.env.CLIENT_ID;
+    const client_secret = process.env.CLIENT_SECRET;
+    const redirect_uri = process.env.REDIRECT_URI; // Ensure this matches the redirect_uri in the frontend
+
+    try {
+        const response = await axios.post(
+            "https://accounts.spotify.com/api/token",
+            new URLSearchParams({
+                grant_type: "authorization_code",
+                code,
+                redirect_uri,
+            }).toString(),
+            {
+                headers: {
+                    Authorization: `Basic ${Buffer.from(`${client_id}:${client_secret}`).toString("base64")}`,
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+            }
+        );
+
+        const { access_token, refresh_token } = response.data;
+
+        // Send tokens to the frontend or save them securely for playback
+        res.json({ access_token, refresh_token });
+    } catch (error) {
+        console.error("Error exchanging token:", error.response?.data || error.message);
+        res.status(500).json({ error: "Failed to exchange token" });
+    }
+});
+
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
