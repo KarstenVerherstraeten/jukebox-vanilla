@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://sdk.scdn.co/spotify-player.js"></script>
-      <script src="/scripts/mediaPlayer.js" defer></script>
-      <script src="/scripts/fetchSongs.js" defer></script>
-        <link rel="stylesheet" href="style.css">
-    <title>Jukebox</title>
-</head>
-<body>
-    <div class="header">
-        <h1 class="title">Welcome to the Jukebox</h1>
-    </div>
-    <div class="jukebox">
-        <div class="song">
-            <div class="vinylWrapper">
-                <div class="vinyl">
-                    <img id="albumCover" src="" alt="Album Cover" />
-                </div>
-            </div>
-            <h2 id="songName">Song Name</h2>
-            <p id="artist">Artist</p>
-        </div>
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://sdk.scdn.co/spotify-player.js"></script>
+		<script src="/scripts/mediaPlayer.js" defer></script>
+		<script src="/scripts/fetchSongs.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
+		<title>Jukebox</title>
+	</head>
+	<body>
+		<div class="header">
+			<h1 class="title">Welcome to the Jukebox</h1>
+		</div>
+		<div class="jukebox">
+			<div class="song">
+				<div class="vinyl">
+					<img id="albumCover" src="" alt="Album Cover" />
+				</div>
 
-    <button id="previous">Previous</button>
-    <button id="togglePlay">Toggle Play</button>
-    <button id="next">Next</button>
-   
-</body>
+				<h2 id="songName">Song Name</h2>
+				<p id="artist">Artist</p>
+			</div>
+		</div>
+
+		<button id="previous">Previous</button>
+		<button id="togglePlay">Toggle Play</button>
+		<button id="next">Next</button>
+	</body>
 </html>
