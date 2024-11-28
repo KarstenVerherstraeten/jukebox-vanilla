@@ -5,22 +5,13 @@ Welcome to the Jukebox Vanilla project! This project is designed to provide a si
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Sources](#sources)
 
 ## Introduction
 
-Jukebox Vanilla is a lightweight music player that supports various audio formats and provides a clean user interface for managing and playing your music library.
-
-## Features
-
-- Play various audio formats (MP3, WAV, FLAC, etc.)
-- Create and manage playlists
-- Simple and intuitive user interface
-- Lightweight and fast
+Jukebox Vanilla is a lightweight music player that uses the spotify API to stream your favorite songs!
 
 ## Installation
 
@@ -46,25 +37,11 @@ To start using Jukebox Vanilla, run the following command:
 npm start
 ```
 
-## Contributing
+## Sources
 
-We welcome contributions to Jukebox Vanilla! To contribute, please follow these steps:
+- [Github Copilot](https://github.com/features/copilot)
+- [Spotify Web API](https://developer.spotify.com/documentation/web-api)
+- [Spotify Web Playback SDK](https://developer.spotify.com/documentation/web-playback-sdk)
+- [ChatGPT | Playlist ID](https://chatgpt.com/share/67482d3f-841c-800f-be20-e353c758b76a)
+- [ChatGPT | Play current song](https://chatgpt.com/share/67482e86-c5c0-800f-8aaa-eca0e69a797d)
 
-1. Fork the repository.
-2. Create a new branch:
-    ```sh
-    git checkout -b feature-branch
-    ```
-3. Make your changes and commit them:
-    ```sh
-    git commit -m "Description of your changes"
-    ```
-4. Push to the branch:
-    ```sh
-    git push origin feature-branch
-    ```
-5. Create a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
