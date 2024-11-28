@@ -1,5 +1,5 @@
 window.onSpotifyWebPlaybackSDKReady = () => {
-    const token = "BQDy9iXlAFkLlFDHy_xny6-sprZ_4kcvq27B4ufTb3b0pXLQC5EJ4emBuQz3zRpNjoN5KDPuXE1bmfvz1lpdFybDTs-ivFTQ3pUlysD1yR4CjWipF4DXVwuP02D8JhDBBBG7hseWwWGVw59Fm19-q2GRNsyVPtflWTC7vSnK4kPRCv_AuiAGsYOhDyj6rNaMdr0Ji7WyHgs73SRK2TLmWG5gMcMKjGQTAw"; // Replace with your Spotify access token
+    const token = "BQD3-JKQcLfehL67YTNnJ20qJA7SzbrmAQHm-6ANLsFzXNeB2PH02xn6jgR2fy7fwaV6LWFNBuGhd9aeogitjCLT4CGnaX-XNhnBULtQuB2TilIzEMBzbXY2eltqeRbQDJCH33xpHNHG1pSKiZtWbMadviHuw9poc6B6wol9b8yPineu94ktP8i9O_7x4BkrvdcNDdmc9auvFtQ24jheYcmYTDg01vdTiA"; // Replace with your Spotify access token
     const player = new Spotify.Player({
         name: "Jukebox",
         getOAuthToken: (cb) => cb(token),
@@ -46,6 +46,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
     // Button handlers
     document.getElementById("togglePlay").onclick = () => {
         player.togglePlay();
+        
         console.log("Toggled playback!");
     };
 
